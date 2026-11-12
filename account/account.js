@@ -7,6 +7,11 @@
   var D = S.desktop || {};
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var view = $('#view');
+  // Tolerate an older cached copy of the page markup.
+  if (!$('#notice')) view.parentNode.insertBefore(h0('div', 'notice hidden', 'notice'), view);
+  if (!$('#who')) { var navc = $('.nav .container'); if (navc) navc.append(h0('div', 'who', 'who')); }
+  if (!$('#toast')) document.body.append(h0('div', 'toast', 'toast'));
+  function h0(tag, cls, id) { var e = document.createElement(tag); e.className = cls; e.id = id; return e; }
   var params = new URLSearchParams(location.search);
   var device = params.get('device') || ''; // windows | mac | extension
   var BASE = location.origin + location.pathname;

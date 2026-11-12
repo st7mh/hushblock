@@ -45,6 +45,16 @@
         <li><b>Network requests</b> — the only server Hushblock contacts is Dodo Payments’ license API, and only if you activate a Pro license.</li>
       </ul>
 
+      <h3 style="margin-top:22px">Hushblock for Windows</h3>
+      <p>The Windows app stores your lists, settings and statistics in <code>%APPDATA%\Hushblock</code> on your PC only. To work it:</p>
+      <ul>
+        <li>checks the names of running programs and closes the ones on your block list;</li>
+        <li>notes which app is in front and whether you are active, to count screen time per app (it never sees what you do inside an app, and never records keystrokes, screenshots or window contents beyond the window title shown in the app picker);</li>
+        <li>adds the websites you block to the Windows <code>hosts</code> file (this is why it asks for administrator rights) and removes them when blocking stops or when you uninstall;</li>
+        <li>contacts only Dodo Payments’ license API, and only when you activate or re-check a Pro license.</li>
+      </ul>
+      <p>Uninstalling removes the hosts entries and the startup task and lets you delete your saved data.</p>
+
       <h2>4. Payments and licenses (Hushblock Pro)</h2>
       <p>Hushblock Pro is sold through <a href="https://dodopayments.com" target="_blank" rel="noopener">Dodo Payments</a>, which acts as our Merchant of Record: it is the seller of record for your purchase, processes your payment and handles sales tax and VAT. When you buy Pro you enter your email address and payment details on Dodo’s checkout page, not inside the extension. Dodo’s handling of that data is governed by the <a href="https://dodopayments.com/privacy-policy" target="_blank" rel="noopener">Dodo Payments privacy policy</a>.</p>
       <p>After purchase you receive a license key. To activate and periodically re-check it, the extension sends the license key, an activation ID and a device label (for example “Hushblock · Chrome on macOS”) to Dodo’s license API. Dodo returns whether the key is valid and, on activation, the plan name and the email address of the purchase, which are stored locally so you can see them in Settings. We can see your email, plan and payment status in our Dodo dashboard to provide support and refunds. We never see your full card details.</p>

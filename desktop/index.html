@@ -64,7 +64,7 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM11.5 4.3L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg>
             <span>Download for Windows — free</span>
           </a>
-          <a class="btn ghost" href="#mac">Mac version</a>
+          <a class="btn ghost" href="#mac" id="heroMac"><span>Mac version</span></a>
         </div>
         <p class="small-note js-dl-note">Windows 10 and 11 · 64-bit · <span class="js-size">2.7 MB</span> · No account needed</p>
         <div class="hero-visual">
@@ -240,15 +240,13 @@
       var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
       var isMac = /Mac/i.test(navigator.platform || '') || /Mac OS X/.test(navigator.userAgent) && !/Windows/.test(navigator.userAgent);
       $$('.js-dl').forEach(function (a) {
-        if (a.getAttribute('href') === '#download' && isMac) return;
+        if (a.getAttribute('href') === '#download' && a.id !== 'heroDl') return;
         a.href = D.windowsUrl || '#';
         a.setAttribute('download', '');
       });
       if (isMac) {
-        var hd = document.getElementById('heroDl');
-        hd.href = '#mac';
-        hd.removeAttribute('download');
-        hd.querySelector('span').textContent = 'On a Mac? See the options';
+        var mb = document.getElementById('heroMac');
+        mb.querySelector('span').textContent = 'Mac — coming soon';
       }
       $$('.js-ver').forEach(function (e) { e.textContent = D.version || ''; });
       $$('.js-size').forEach(function (e) { e.textContent = D.size || ''; });

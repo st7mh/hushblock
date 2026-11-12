@@ -76,6 +76,10 @@
       var key = (q.get('license_key') || '').split(',')[0].trim();
       var copy = document.getElementById('copy');
       if (key) document.getElementById('key').textContent = key;
+      if (q.get('from') === 'account') {
+        document.querySelector('#ok h1').textContent = 'Activating Hushblock Pro';
+        document.querySelector('#ok .lead').textContent = 'If the Hushblock extension is installed in this browser, Pro turns on automatically in a moment. Otherwise paste the key below in the extension.';
+      }
       if (key) document.getElementById('openApp').href = 'hushblock://activate?key=' + encodeURIComponent(key);
       else copy.style.display = 'none';
       copy.addEventListener('click', function () {

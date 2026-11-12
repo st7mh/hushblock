@@ -2,6 +2,12 @@
 window.SITE = {
   // Your Chrome Web Store link (fill in after the extension is approved)
   storeUrl: '',
+  // Browser extension store pages — paste each link once the listing is live.
+  stores: {
+    chrome: '',
+    edge: '',
+    firefox: '',
+  },
   // Support email shown on the site and in the privacy policy
   email: 'grytsaims@gmail.com',
   // Seller name shown in the Terms

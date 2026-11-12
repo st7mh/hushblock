@@ -3,29 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Hushblock account</title>
-  <meta name="description" content="Sign in to your Hushblock account to use Pro on Windows, Mac and in your browser." />
+  <title>Hushblock account</title>
+  <meta name="description" content="Sign in to Hushblock to use Pro on Windows, Mac and in your browser." />
   <meta name="robots" content="noindex" />
   <link rel="icon" href="../img/favicon-32.png" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="account.css" />
 </head>
-<body>
+<body class="acc">
   <header class="nav">
     <div class="container">
-      <a class="brand" href="../index.html"><img src="../img/logo.svg" alt="" />Hushblock</a>
+      <a class="brand" href="../"><img src="../img/logo.svg" alt="" />Hushblock</a>
       <nav class="links" aria-label="Main">
-        <a href="../index.html">Browser extension</a>
-        <a href="../desktop/">Windows app</a>
+        <a href="../#get">Download</a>
+        <a href="../#pricing">Pricing</a>
+        <a href="../#faq">Help</a>
       </nav>
-      <span id="whoNav" class="who-nav"></span>
+      <div id="who" class="who"></div>
     </div>
   </header>
 
   <main class="container acc-main">
-    <div id="deviceBanner" class="device-banner hidden"></div>
+    <div id="notice" class="notice hidden" role="status"></div>
     <div id="view" aria-live="polite">
-      <div class="acc-card center"><span class="spin"></span></div>
+      <div class="panel center loading"><span class="spin"></span></div>
     </div>
   </main>
 
@@ -33,6 +34,7 @@
     <div class="container">
       <span>© <span class="js-year">2026</span> Hushblock</span>
       <nav>
+        <a href="../desktop/">Windows app</a>
         <a href="../privacy.html">Privacy</a>
         <a href="../terms.html">Terms & refunds</a>
         <a class="js-email" href="#">Contact</a>

@@ -19,36 +19,71 @@
 <body>
   <header class="nav">
     <div class="container">
-      <a class="brand" href="#"><img src="img/logo.svg" alt="" />Hushblock</a>
+      <a class="brand" href="./"><img src="img/logo.svg" alt="" />Hushblock</a>
       <nav class="links" aria-label="Main">
         <a href="#features">Features</a>
-        <a href="#pro">Pro</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="desktop/" class="nav-new">Windows app <span class="new-dot">New</span></a>
-        <a href="account/">Account</a>
+        <a href="desktop/">Windows app</a>
       </nav>
-      <a class="btn primary sm js-store" href="#">Add to Chrome</a>
+      <a class="nav-signin" href="account/">Sign in</a>
+      <a class="btn primary sm" href="#get">Download</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="container">
-        <span class="eyebrow"><b>New</b> Website blocker + focus timer for Chrome</span>
-        <h1>Quiet the internet. <em>Do your best work.</em></h1>
-        <p class="lead">Hushblock blocks the sites that steal your time, runs a focus timer that actually blocks, and shows where your hours really go. Private, simple, set up in 30 seconds.</p>
+        <span class="eyebrow"><b>New</b> Hushblock for Windows is here</span>
+        <h1>Block distractions. <em>Do your best work.</em></h1>
+        <p class="lead">Hushblock blocks the apps and websites that steal your time, runs a focus timer that actually blocks, and shows where your hours really go. Free to start, set up in a minute.</p>
         <div class="cta-row">
-          <a class="btn primary js-store" href="#">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.5M8.97 13.75 4.7 6.4M15.03 13.75 10.8 21"/></svg>
-            <span class="js-store-label">Add to Chrome — it’s free</span>
-          </a>
-          <a class="btn ghost" href="#features">See how it works</a>
+          <a class="btn primary js-dl-win" href="desktop/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM11.5 4.3L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg><span>Download for Windows — free</span></a>
+          <a class="btn ghost" href="#get">Other devices</a>
         </div>
-        <p class="small-note">Also works in Edge, Brave and Arc · No account needed</p>
+        <p class="small-note">Windows 10 &amp; 11 · Browser extension for Chrome, Edge &amp; Firefox · Mac coming soon</p>
         <div class="hero-visual">
-          <div class="browser"><div class="bar"><i></i><i></i><i></i><span>www.instagram.com</span></div><img src="img/block-page.webp" alt="Hushblock block page during a focus session, showing a countdown timer" width="1400" height="916" /></div>
-          <div class="pop"><img src="img/popup.webp" alt="Hushblock toolbar popup with focus timer" width="720" height="1280" /></div>
+          <div class="browser"><div class="bar"><i></i><i></i><i></i><span>Hushblock for Windows</span></div><img src="img/win-home-light.webp" alt="Hushblock for Windows: focus timer, today's stats and blocking mode" width="1400" height="942" /></div>
+          <div class="pop"><img src="img/popup.webp" alt="Hushblock browser extension popup with focus timer" width="720" height="1280" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="get" style="padding-top:48px">
+      <div class="container">
+        <div class="section-head">
+          <h2>Get Hushblock</h2>
+          <p>Pick where you want to focus. One Pro license works on all of them — up to 3 devices.</p>
+        </div>
+        <div class="get-grid">
+          <div class="get-card main">
+            <div class="get-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM11.5 4.3L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg></div>
+            <span class="get-tag">Available now</span>
+            <h3>Windows app</h3>
+            <p>Blocks apps <b>and</b> websites on your whole PC — Steam, Discord, games, YouTube, TikTok. Lives in the tray.</p>
+            <a class="btn primary js-dl-win" href="desktop/">Download for Windows</a>
+            <a class="get-more" href="desktop/">What’s inside →</a>
+          </div>
+          <div class="get-card">
+            <div class="get-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.5 12h17M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></div>
+            <span class="get-tag js-ext-tag">In review</span>
+            <h3>Browser extension</h3>
+            <p>Website blocker with a calm block page and focus timer. Works on any computer, including Mac and Chromebook.</p>
+            <div class="store-links js-stores"></div>
+            <span class="get-more muted js-ext-note">Coming to Chrome, Edge and Firefox stores very soon.</span>
+          </div>
+          <div class="get-card">
+            <div class="get-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.2.8 1.1 1.7 2.3 2.9 2.3 1.2-.1 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg></div>
+            <span class="get-tag soon">Coming soon</span>
+            <h3>Mac app</h3>
+            <p>Block apps and websites on your Mac. We’ll email you once when it’s ready — nothing else.</p>
+            <a class="btn ghost js-notify-mac" href="#">Notify me</a>
+            <span class="get-more muted">Your Pro subscription will work there too.</span>
+          </div>
+        </div>
+        <div class="get-account">
+          <div><b>Already have Pro?</b> Sign in to your Hushblock account to turn it on in every app.</div>
+          <a class="btn ghost sm" href="account/">Sign in</a>
         </div>
       </div>
     </section>
@@ -60,12 +95,12 @@
           <p>No complicated setup. Pick your distractions, choose when to block them, and get back to work.</p>
         </div>
         <div class="grid3">
-          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></svg></div><h3>Block in one click</h3><p>YouTube, Instagram, TikTok, Reddit, X — or just YouTube Shorts. Subdomains included, open tabs blocked instantly.</p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></svg></div><h3>Block apps and sites</h3><p>Steam, Discord and games on Windows; YouTube, Instagram, TikTok, Reddit, X in every browser — or just YouTube Shorts in the extension.</p></div>
           <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7"/><path d="M12 10v3.5l2 1.5M10 3h4"/></svg></div><h3>Focus timer that blocks</h3><p>Start a 25, 50 or 90-minute Pomodoro session. Your list stays blocked until the timer ends, then take a break.</p></div>
           <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div><h3>Schedules</h3><p>Block distractions automatically during work or study hours — and wind down at night.</p></div>
           <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9s8 4 8 9"/></svg></div><h3>Daily time limits</h3><p>Allow 20 minutes of a site a day. When it’s used up, it’s blocked until tomorrow.</p></div>
           <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20h16"/><rect x="6" y="11" width="3" height="6" rx="1"/><rect x="11" y="6" width="3" height="11" rx="1"/><rect x="16" y="13" width="3" height="4" rx="1"/></svg></div><h3>Real insights</h3><p>Focus minutes, streaks, blocked visits and time per website — see your progress every day.</p></div>
-          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 9.5C8 19.3 5 15.5 5 11V6l7-3z"/></svg></div><h3>Private by design</h3><p>Your list and stats never leave your browser. No account, no tracking, no ads.</p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 9.5C8 19.3 5 15.5 5 11V6l7-3z"/></svg></div><h3>Private by design</h3><p>Your lists and stats stay on your device. No tracking, no ads. An account is only needed to use Pro on several devices.</p></div>
         </div>
       </div>
     </section>
@@ -129,14 +164,14 @@
           <div class="price">
             <h3>Free</h3>
             <div class="amt">$0</div>
-            <ul><li>Block up to 5 sites</li><li>Unlimited focus sessions</li><li>1 schedule & 1 daily limit</li><li>7 days of stats</li></ul>
-            <a class="btn ghost js-store" href="#">Add to Chrome</a>
+            <ul><li>Block up to 5 sites (and 3 apps on Windows)</li><li>Unlimited focus sessions</li><li>1 schedule</li><li>7 days of stats</li></ul>
+            <a class="btn ghost" href="#get">Download free</a>
           </div>
           <div class="price best">
             <h3>Pro yearly</h3>
             <div class="amt"><span class="js-price-year">$29.99</span> <small>/ year</small></div>
             <p class="muted">That’s about <span class="js-price-year-mo">$2.50</span> a month.</p>
-            <ul><li>Everything in Free</li><li>Strict mode & allowlist mode</li><li>Unlimited sites, schedules, limits</li><li>Keywords, password, 90-day history</li></ul>
+            <ul><li>Everything in Free</li><li>Windows app + extension, 3 devices</li><li>Strict mode & allowlist mode</li><li>Unlimited sites, schedules, limits</li><li>Keywords, password, 90-day history</li></ul>
             <a class="btn primary js-buy-year" href="#pricing">Get Pro yearly</a>
           </div>
           <div class="price">
@@ -147,7 +182,7 @@
             <a class="btn ghost js-buy-month" href="#pricing">Get Pro monthly</a>
           </div>
         </div>
-        <p class="small-note" style="text-align:center;margin-top:18px">Prices include tax. Try Pro free for 7 days inside the extension — no card needed. Payments are handled by Dodo Payments, our Merchant of Record.</p>
+        <p class="small-note" style="text-align:center;margin-top:18px">Prices include tax. Try Pro free for 7 days inside the app or extension — no card needed. After paying, sign in with the same email and Pro turns on everywhere. Payments are handled by Dodo Payments, our Merchant of Record.</p>
       </div>
     </section>
 
@@ -161,7 +196,7 @@
             <ul class="ticks"><li>Blocks any program on Windows 10 and 11</li><li>Daily time limits and strict mode</li><li>Mac version coming soon</li></ul>
             <div class="cta-row" style="justify-content:flex-start"><a class="btn primary" href="desktop/">Get the Windows app</a></div>
           </div>
-          <div class="shot"><img src="img/win-home-light.webp" alt="Hushblock for Windows app" width="1400" height="942" loading="lazy" /></div>
+          <div class="shot"><img src="img/win-picker.webp" alt="Choosing apps to block in Hushblock for Windows" width="1400" height="942" loading="lazy" /></div>
         </div>
       </div>
     </section>
@@ -170,13 +205,14 @@
       <div class="container">
         <div class="section-head"><h2>Questions</h2></div>
         <div class="faq">
+          <details><summary>Which version should I use?</summary><p>On a Windows PC, download the <a href="desktop/">Windows app</a> — it blocks apps and websites everywhere. On a Mac or Chromebook, use the browser extension until the Mac app is ready. You can use both; one Pro license covers up to 3 devices.</p></details>
           <details><summary>Is Hushblock really free?</summary><p>Yes. Blocking up to 5 sites, unlimited focus sessions, one schedule, one daily limit and a week of stats are free forever. Pro unlocks strict mode, unlimited blocking and more.</p></details>
           <details><summary>Does Hushblock see or sell my browsing data?</summary><p>No. Your block list, browsing time and statistics are stored only in your browser. Hushblock has no servers that receive this data, and there are no ads or analytics. Read the <a href="privacy.html">privacy policy</a>.</p></details>
           <details><summary>Can I block only YouTube Shorts?</summary><p>Yes. Add <b>youtube.com/shorts</b> to your block list — the rest of YouTube keeps working.</p></details>
           <details><summary>What happens when I try to open a blocked site?</summary><p>You’ll see a calm block page with a short motivational line and your progress for today. If you allow it, you can get in for a few minutes after a short breathing pause — unless strict mode is on.</p></details>
           <details><summary>Can I stop myself from turning it off?</summary><p>With Pro, strict mode locks your session: no stopping early, no pausing, no unblocking. You can also protect your settings with a password — ask a friend to set it.</p></details>
           <details><summary>How do I cancel Pro?</summary><p>Open the extension’s Settings → Your plan → Manage subscription, or go straight to the <a class="js-portal" href="#">customer portal</a> and sign in with the email you used to pay. You keep Pro until the end of the period you paid for.</p></details>
-          <details><summary>I bought Pro — how do I activate it?</summary><p>If Hushblock is installed in the browser you paid in, Pro switches on by itself. Otherwise open Hushblock → Hushblock Pro, paste the license key from your receipt email and click Activate. One key works in up to 3 browsers.</p></details>
+          <details><summary>I bought Pro — how do I activate it?</summary><p>If Hushblock is installed in the browser you paid in, Pro switches on by itself. Otherwise <a href="account/">sign in to your account</a> with the email you paid with and press Activate for your device — or paste the license key from your receipt email in Hushblock → Pro. One key works on up to 3 devices.</p></details>
           <details><summary>Does it work in Edge, Brave or Arc?</summary><p>Yes — any Chromium-based browser that can install extensions from the Chrome Web Store.</p></details>
         </div>
       </div>
@@ -186,7 +222,7 @@
       <div class="container final">
         <img src="img/logo.svg" alt="" width="72" height="72" />
         <h2>Your focus, back in 30 seconds.</h2>
-        <a class="btn primary js-store" href="#"><span class="js-store-label">Add to Chrome — it’s free</span></a>
+        <div class="cta-row"><a class="btn primary js-dl-win" href="desktop/">Download for Windows</a><a class="btn ghost" href="#get">Other devices</a></div>
       </div>
     </section>
   </main>

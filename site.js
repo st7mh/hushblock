@@ -11,6 +11,29 @@
     }
   });
   if (!S.storeUrl) all('.js-store-label').forEach((el) => (el.textContent = 'Coming soon to the Chrome Web Store'));
+  // Windows download buttons go straight to the installer.
+  const D = S.desktop || {};
+  if (D.windowsUrl) all('.js-dl-win').forEach((a) => { a.href = D.windowsUrl; a.setAttribute('download', ''); });
+  // Browser stores: show the ones that are live.
+  const stores = S.stores || {};
+  const names = { chrome: 'Chrome', edge: 'Edge', firefox: 'Firefox' };
+  const live = Object.keys(names).filter((k) => stores[k]);
+  all('.js-stores').forEach((box) => {
+    live.forEach((k) => {
+      const a = document.createElement('a');
+      a.className = 'btn ghost sm';
+      a.href = stores[k];
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = 'Add to ' + names[k];
+      box.append(a);
+    });
+  });
+  if (live.length) {
+    all('.js-ext-tag').forEach((el) => (el.textContent = 'Available now'));
+    all('.js-ext-note').forEach((el) => (el.textContent = live.length < 3 ? 'More stores coming soon.' : 'Works in Brave, Arc and Opera too.'));
+  }
+  all('.js-notify-mac').forEach((a) => S.email && (a.href = 'mailto:' + S.email + '?subject=' + encodeURIComponent('Notify me: Hushblock for Mac') + '&body=' + encodeURIComponent('Please email me when Hushblock for Mac is available.')));
   all('.js-email').forEach((a) => {
     if (S.email) {
       a.href = 'mailto:' + S.email;

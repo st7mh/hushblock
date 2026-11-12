@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank you — Hushblock Pro</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="img/favicon-32.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .thanks { max-width: 640px; margin: 0 auto; padding: 64px 0 90px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; }
+    .thanks h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 830; }
+    .thanks .lead { color: var(--muted); font-size: 18px; }
+    .keybox { width: 100%; display: flex; gap: 8px; align-items: center; background: var(--surface); border: 1.5px dashed var(--brand); border-radius: 14px; padding: 10px 10px 10px 16px; }
+    .keybox code { flex: 1; font-size: 15px; word-break: break-all; text-align: left; }
+    .steps { text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px 24px; }
+    .steps ol { margin: 8px 0 0; padding-left: 20px; color: var(--ink-2); }
+    .steps li { margin: 8px 0; }
+    .ok-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--brand); display: grid; place-items: center; color: #fff; font-size: 34px; font-weight: 900; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="index.html"><img src="img/logo.svg" alt="" />Hushblock</a>
+      <span style="margin-left:auto"></span>
+      <a class="btn ghost sm" href="index.html">Home</a>
+    </div>
+  </header>
+  <main class="container">
+    <section class="thanks" id="ok">
+      <div class="ok-icon" aria-hidden="true">✓</div>
+      <h1>Welcome to Hushblock Pro</h1>
+      <p class="lead">Thank you for your purchase! If Hushblock is installed in this browser, Pro is already active — open it from the toolbar.</p>
+      <div class="keybox" id="keybox">
+        <code id="key">Your license key is in your receipt email.</code>
+        <button class="btn primary sm" id="copy" type="button">Copy</button>
+      </div>
+      <div class="steps">
+        <b>Activate Pro in another browser</b>
+        <ol>
+          <li>Install Hushblock <span class="js-store-inline">from the Chrome Web Store</span>.</li>
+          <li>Click the Hushblock icon → gear → <b>Hushblock Pro</b>.</li>
+          <li>Paste the key under “Already have a license key?” and click <b>Activate</b>.</li>
+        </ol>
+        <p class="small-note" style="margin-top:10px">One key works in up to 3 browsers. Manage or cancel anytime in the <a class="js-portal" href="#">customer portal</a>.</p>
+      </div>
+    </section>
+    <section class="thanks hidden" id="fail" style="display:none">
+      <h1>Payment not completed</h1>
+      <p class="lead">Nothing was charged. You can try again from the extension or the <a href="index.html#pricing">pricing section</a>.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <span>© <span class="js-year">2026</span> Hushblock</span>
+      <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms & refunds</a><a class="js-email" href="#">Contact</a></nav>
+    </div>
+  </footer>
+  <script src="site-config.js"></script>
+  <script src="site.js"></script>
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search);
+      var status = (q.get('status') || '').toLowerCase();
+      if (status === 'failed' || status === 'cancelled') {
+        document.getElementById('ok').style.display = 'none';
+        document.getElementById('fail').style.display = 'flex';
+        return;
+      }
+      var key = (q.get('license_key') || '').split(',')[0].trim();
+      var copy = document.getElementById('copy');
+      if (key) document.getElementById('key').textContent = key;
+      else copy.style.display = 'none';
+      copy.addEventListener('click', function () {
+        navigator.clipboard.writeText(key).then(function () { copy.textContent = 'Copied'; });
+      });
+      var S = window.SITE || {};
+      if (S.storeUrl) {
+        var el = document.querySelector('.js-store-inline');
+        el.innerHTML = '';
+        var a = document.createElement('a');
+        a.href = S.storeUrl; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'from the Chrome Web Store';
+        el.appendChild(a);
+      }
+    })();
+  </script>
+</body>
+</html>

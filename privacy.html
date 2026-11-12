@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Hushblock</title>
+  <meta name="description" content="Hushblock privacy policy: your block list and browsing statistics stay on your device." />
+  <link rel="icon" href="img/favicon-32.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="index.html"><img src="img/logo.svg" alt="" />Hushblock</a>
+      <span style="margin-left:auto"></span>
+      <a class="btn ghost sm" href="index.html">Home</a>
+    </div>
+  </header>
+  <main class="container">
+    <article class="legal">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: November 12, 2026</p>
+
+      <p><b>Short version:</b> Hushblock keeps your block list, settings and browsing statistics on your own device. We don’t have servers that receive this data, we don’t use analytics or ads, and we never sell data. If you buy Hushblock Pro, the payment is handled by Dodo Payments, our Merchant of Record.</p>
+
+      <h2>1. Who we are</h2>
+      <p>Hushblock is a browser extension for Google Chrome and other Chromium-based browsers, provided by <span class="js-owner">the Hushblock developer</span> (“we”, “us”). You can contact us at <a class="js-email" data-show href="#">the email listed on our website</a>.</p>
+
+      <h2>2. Data stored only on your device</h2>
+      <p>To work, Hushblock stores the following in your browser’s local extension storage (<code>chrome.storage.local</code>). This data is not transmitted to us or to anyone else:</p>
+      <ul>
+        <li>Your settings: blocked websites and keywords, schedules, daily limits, focus timer and block-page preferences, and (if you set one) a one-way hash of your password.</li>
+        <li>Focus statistics: minutes focused, sessions completed, number of blocked visits and “let me in” uses per day.</li>
+        <li>Time per website: the domain name (for example <i>youtube.com</i>) and the number of seconds you spent on it each day. This is measured only while the site is in your active tab and you are using your computer (or the tab is playing audio). Full page addresses and page contents are not stored.</li>
+      </ul>
+      <p>Statistics are kept for up to 97 days and then deleted automatically. You can export your data or reset your statistics at any time in <i>Settings</i>. Uninstalling the extension deletes all of it.</p>
+
+      <h2>3. How Hushblock uses browser permissions</h2>
+      <ul>
+        <li><b>Access to websites</b> — to redirect websites you chose to block to Hushblock’s block page, to block tabs that are already open when a session starts, and to read the address of your active tab to measure time for your daily limits. Hushblock does not read, collect or change the content of web pages.</li>
+        <li><b>Storage</b> — to save your settings and statistics locally.</li>
+        <li><b>Alarms, idle and notifications</b> — to run the focus timer and schedules, pause time tracking while you are away, and tell you when a session ends.</li>
+        <li><b>Context menus</b> — to add “Block this site” to the right-click menu.</li>
+        <li><b>Favicon</b> — to show website icons from Chrome’s local cache. No network request is made for this.</li>
+        <li><b>Network requests</b> — the only server Hushblock contacts is Dodo Payments’ license API, and only if you activate a Pro license.</li>
+      </ul>
+
+      <h2>4. Payments and licenses (Hushblock Pro)</h2>
+      <p>Hushblock Pro is sold through <a href="https://dodopayments.com" target="_blank" rel="noopener">Dodo Payments</a>, which acts as our Merchant of Record: it is the seller of record for your purchase, processes your payment and handles sales tax and VAT. When you buy Pro you enter your email address and payment details on Dodo’s checkout page, not inside the extension. Dodo’s handling of that data is governed by the <a href="https://dodopayments.com/privacy-policy" target="_blank" rel="noopener">Dodo Payments privacy policy</a>.</p>
+      <p>After purchase you receive a license key. To activate and periodically re-check it, the extension sends the license key, an activation ID and a device label (for example “Hushblock · Chrome on macOS”) to Dodo’s license API. Dodo returns whether the key is valid and, on activation, the plan name and the email address of the purchase, which are stored locally so you can see them in Settings. We can see your email, plan and payment status in our Dodo dashboard to provide support and refunds. We never see your full card details.</p>
+      <p>The free 7-day trial is started inside the extension and needs no payment details. A trial start date is saved in your browser’s extension storage (which Chrome may sync across your own devices if Chrome Sync is on) so the trial is only used once.</p>
+
+      <h2>5. What we don’t do</h2>
+      <ul>
+        <li>We don’t sell, rent or share your data.</li>
+        <li>We don’t use analytics, advertising or tracking tools.</li>
+        <li>We don’t use your data for anything unrelated to Hushblock’s single purpose: helping you stay focused.</li>
+        <li>We don’t use or transfer your data to determine creditworthiness or for lending purposes.</li>
+      </ul>
+      <p>Hushblock’s use of information complies with the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" target="_blank" rel="noopener">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</p>
+
+      <h2>6. Your rights</h2>
+      <p>Because your browsing data stays on your device, you control it directly: you can view, export or delete it in the extension at any time. For payment data held by Dodo Payments, or if you want us to delete the email address linked to your purchase, contact us and we’ll help. If you live in the EU/EEA or the UK, you have rights of access, correction, deletion and objection under the GDPR.</p>
+
+      <h2>7. Children</h2>
+      <p>Hushblock is not directed at children under 13, and we don’t knowingly collect personal information from them.</p>
+
+      <h2>8. Changes</h2>
+      <p>If we change this policy, we will update the date at the top of this page. Significant changes will be announced in the extension’s release notes.</p>
+
+      <h2>9. Contact</h2>
+      <p>Questions about privacy? Email <a class="js-email" data-show href="#">us</a>.</p>
+    </article>
+  </main>
+  <footer>
+    <div class="container">
+      <span>© <span class="js-year">2026</span> Hushblock</span>
+      <nav><a href="index.html">Home</a><a href="terms.html">Terms & refunds</a></nav>
+    </div>
+  </footer>
+  <script src="site-config.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

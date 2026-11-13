@@ -14,6 +14,27 @@
   // Windows download buttons go straight to the installer.
   const D = S.desktop || {};
   if (D.windowsUrl) all('.js-dl-win').forEach((a) => { a.href = D.windowsUrl; a.setAttribute('download', ''); });
+  const M = D.mac || {};
+  if (M.url) all('.js-dl-mac').forEach((a) => { a.href = M.url; a.setAttribute('download', ''); });
+  // Mac visitors get the Mac download as the main button and card.
+  const onMac = /Mac/i.test(navigator.platform || '') && !/iPhone|iPad/.test(navigator.userAgent);
+  if (onMac && M.url) {
+    all('.js-hero-dl').forEach((a) => {
+      a.href = M.url;
+      a.setAttribute('download', '');
+      const span = a.querySelector('span');
+      if (span) span.textContent = 'Download for Mac — free';
+      const svg = document.querySelector('.js-mac-card .get-ic svg');
+      const old = a.querySelector('svg');
+      if (svg && old) old.replaceWith(svg.cloneNode(true));
+    });
+    const grid = document.querySelector('.get-grid');
+    const card = document.querySelector('.js-mac-card');
+    if (grid && card) {
+      grid.insertBefore(card, grid.firstChild);
+      grid.querySelectorAll('.get-card').forEach((c, i) => c.classList.toggle('main', i === 0));
+    }
+  }
   // Browser stores: show the ones that are live.
   const stores = S.stores || {};
   const names = { chrome: 'Chrome', edge: 'Edge', firefox: 'Firefox' };

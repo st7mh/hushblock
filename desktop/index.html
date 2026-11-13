@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hushblock for Windows — Block Distracting Apps & Websites</title>
-  <meta name="description" content="Block games, Discord, Steam, social media and any app or website on your PC. Focus timer, schedules, daily time limits and strict mode. Free download for Windows 10 and 11." />
+  <title>Hushblock for Windows & Mac — Block Distracting Apps & Websites</title>
+  <meta name="description" content="Block games, Discord, Steam, social media and any app or website on your computer. Focus timer, schedules, daily time limits and strict mode. Free download for Windows 10/11 and macOS 11+." />
   <meta property="og:title" content="Hushblock for Windows — block distracting apps and websites" />
   <meta property="og:description" content="Close Steam, Discord and TikTok the moment they open. Focus timer, schedules and daily limits for your whole PC." />
   <meta property="og:image" content="../img/win-home-light.webp" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="../img/favicon-32.png" />
-  <link rel="stylesheet" href="../style.css?v=20261112c" />
+  <link rel="stylesheet" href="../style.css?v=20261113b" />
   <style>
     .os-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
     .os { background: var(--surface); border: 1.5px solid var(--line); border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 12px; }
@@ -57,17 +57,20 @@
   <main>
     <section class="hero">
       <div class="container">
-        <span class="eyebrow"><b>New</b> Hushblock for Windows</span>
+        <span class="eyebrow"><b>New</b> Hushblock for Mac and Windows</span>
         <h1>Block distracting apps. <em>Not just websites.</em></h1>
-        <p class="lead">Steam, Discord, Telegram, games, YouTube, TikTok — Hushblock closes them the moment they open, across your whole PC and every browser. Focus timer, schedules and daily limits included.</p>
+        <p class="lead">Steam, Discord, Telegram, games, YouTube, TikTok — Hushblock closes them the moment they open, across your whole computer and every browser. Focus timer, schedules and daily limits included.</p>
         <div class="cta-row">
-          <a class="btn primary js-dl" href="#download" id="heroDl">
+          <a class="btn primary js-dl-win" href="#download" id="heroWin">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3zM11.5 4.3L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg>
-            <span>Download for Windows — free</span>
+            <span>Download for Windows</span>
           </a>
-          <a class="btn ghost" href="#mac" id="heroMac"><span>Mac version</span></a>
+          <a class="btn ghost js-dl-mac" href="#mac" id="heroMac">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.2.8 1.1 1.7 2.3 2.9 2.3 1.2-.1 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg>
+            <span>Download for Mac</span>
+          </a>
         </div>
-        <p class="small-note js-dl-note">Windows 10 and 11 · 64-bit · <span class="js-size">2.7 MB</span> · No account needed</p>
+        <p class="small-note">Free · Windows 10 &amp; 11 · macOS 11 or later (Apple silicon &amp; Intel) · No account needed</p>
         <div class="hero-visual">
           <div class="win"><div class="bar"><img src="../img/logo.svg" alt="" />Hushblock<span class="ctl">—&nbsp;☐&nbsp;✕</span></div><img src="../img/win-home-light.webp" alt="Hushblock for Windows: focus timer, today's stats and blocking mode" width="1400" height="942" /></div>
         </div>
@@ -78,7 +81,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Get Hushblock</h2>
-          <p>One Pro license works everywhere — on your PC and in your browser, up to 3 devices.</p>
+          <p>One Pro license works everywhere — Windows, Mac and your browser, up to 3 devices.</p>
         </div>
         <div class="os-row">
           <div class="os main">
@@ -86,16 +89,16 @@
             <span class="tag">Available now</span>
             <h3>Windows</h3>
             <p>Blocks apps and websites system-wide. Lives in the tray, starts with Windows. Windows 10 and 11 (64-bit).</p>
-            <a class="btn primary js-dl" href="#">Download Hushblock-Setup.exe</a>
+            <a class="btn primary js-dl-win" href="#">Download for Windows</a>
             <span class="meta">Version <span class="js-ver">1.0.0</span> · <span class="js-size">2.7 MB</span></span>
           </div>
-          <div class="os" id="mac">
+          <div class="os main" id="mac">
             <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.2.8 1.1 1.7 2.3 2.9 2.3 1.2-.1 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg></div>
-            <span class="tag soon">Coming soon</span>
-            <h3>macOS</h3>
-            <p>The Mac app is in the works. Leave your email and we’ll write once when it’s ready — nothing else.</p>
-            <a class="btn ghost js-notify" href="#">Notify me</a>
-            <span class="meta">Meanwhile, use the browser extension on your Mac.</span>
+            <span class="tag">New</span>
+            <h3>Mac</h3>
+            <p>Blocks apps and websites on your Mac. Lives in the menu bar. macOS 11 or later, Apple silicon and Intel.</p>
+            <a class="btn primary js-dl-mac" href="#">Download for Mac</a>
+            <span class="meta">Version <span class="js-mac-ver">1.0.0</span> · <span class="js-mac-size">6.1 MB</span> · <a href="#mac-install">First launch help</a></span>
           </div>
           <div class="os">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.5 12h17M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></div>
@@ -103,7 +106,7 @@
             <h3>Browser extension</h3>
             <p>Website blocker with a friendly block page and focus timer for Chrome, Edge, Brave and Firefox — on any computer.</p>
             <a class="btn ghost" href="../#get">Get the extension</a>
-            <span class="meta">Works great together with the Windows app.</span>
+            <span class="meta">Works great together with the desktop app.</span>
           </div>
         </div>
       </div>
@@ -116,8 +119,8 @@
           <p>Browser blockers stop at the browser. Hushblock also stops the games and chat apps on your desktop.</p>
         </div>
         <div class="grid3">
-          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8"/></svg></div><h3>Block any app</h3><p>Steam, Epic, Riot, Roblox, Discord, Telegram, WhatsApp — one click from the list, or pick any program on your PC.</p></div>
-          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.3 2.4 3.5 5.2 3.5 8.5s-1.2 6.1-3.5 8.5"/></svg></div><h3>Websites in every browser</h3><p>YouTube, Instagram, Reddit, X — blocked in Chrome, Edge, Firefox, Opera and Brave at once, including mobile domains and short links.</p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8"/></svg></div><h3>Block any app</h3><p>Steam, Epic, Riot, Roblox, Discord, Telegram, WhatsApp — one click from the list, or pick any app on your computer.</p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.3 2.4 3.5 5.2 3.5 8.5s-1.2 6.1-3.5 8.5"/></svg></div><h3>Websites in every browser</h3><p>YouTube, Instagram, Reddit, X — blocked in Safari, Chrome, Edge, Firefox, Opera and Brave at once, including mobile domains and short links.</p></div>
           <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13.5" r="7"/><path d="M12 10v3.5l2 1.5M10 3h4"/></svg></div><h3>Focus timer</h3><p>25, 50 or 90 minutes. Everything on your list stays closed until the timer ends — then take a break.</p></div>
           <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div><h3>Schedules</h3><p>Work hours, study time, no games after 23:00 — Hushblock switches on and off by itself.</p></div>
           <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9s8 4 8 9"/></svg></div><h3>Daily time limits</h3><p>30 minutes of Discord a day, an hour of games. When the time is up, the app stays closed until tomorrow.</p></div>
@@ -142,7 +145,7 @@
         <div class="split">
           <div class="text">
             <h3>See where your hours go</h3>
-            <p>Focus time, screen time and your top apps for the last 7, 30 or 90 days. Everything stays on your PC.</p>
+            <p>Focus time, screen time and your top apps for the last 7, 30 or 90 days. Everything stays on your computer.</p>
             <ul class="ticks"><li>Counts only active time</li><li>Block an app right from the list</li><li>No accounts, no cloud, no tracking</li></ul>
           </div>
           <div class="shot"><img src="../img/win-insights.webp" alt="Insights: focus and screen time per day and top apps" width="1400" height="942" loading="lazy" /></div>
@@ -162,6 +165,12 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex:none;color:var(--brand-text)"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 7.5v.5"/></svg>
           <div><b>Seeing “Windows protected your PC”?</b> Hushblock is new, so Microsoft SmartScreen doesn’t know it yet. Click <b>More info → Run anyway</b>. The installer is safe; you can check it against the SHA-256 checksum: <code class="js-sha" style="font-size:12px;word-break:break-all">—</code></div>
         </div>
+        <div class="section-head" id="mac-install" style="margin:48px auto 22px"><h2 style="font-size:30px">First launch on a Mac</h2><p>Hushblock isn’t in the App Store yet, so macOS asks you to confirm once.</p></div>
+        <div class="steps-row">
+          <div class="step"><h3>Open the download</h3><p>Your browser unzips <b>Hushblock-mac.zip</b> (or double-click it). Open <b>Hushblock</b> — it offers to move itself into <b>Applications</b>.</p></div>
+          <div class="step"><h3>Allow it once</h3><p>Open Hushblock. If macOS says it can’t check it, click <b>Done</b>, then go to <b>System Settings → Privacy &amp; Security</b> and click <b>Open Anyway</b>.</p></div>
+          <div class="step"><h3>Turn on website blocking</h3><p>When you add your first website, click <b>Allow</b> and enter your Mac password. Hushblock then waits in the menu bar.</p></div>
+        </div>
       </div>
     </section>
 
@@ -169,19 +178,19 @@
       <div class="container">
         <div class="section-head">
           <h2>Free to start. Pro when you’re ready.</h2>
-          <p>Pro unlocks everything in the Windows app <b>and</b> the browser extension with one license.</p>
+          <p>Pro unlocks everything in the Windows and Mac apps <b>and</b> the browser extension with one license.</p>
         </div>
         <div class="prices">
           <div class="price">
             <h3>Free</h3>
             <div class="amt">$0</div>
             <ul><li>3 apps and 5 websites</li><li>Unlimited focus sessions</li><li>1 schedule</li><li>7 days of insights</li></ul>
-            <a class="btn ghost js-dl" href="#">Download</a>
+            <a class="btn ghost" href="#download">Download free</a>
           </div>
           <div class="price best">
             <h3>Pro yearly</h3>
             <div class="amt"><span class="js-price-year">$29.99</span> <small>/ year</small></div>
-            <ul><li>Unlimited apps and websites</li><li>Daily time limits</li><li>Strict mode</li><li>Unlimited schedules</li><li>90 days of insights</li><li>Windows app + extension, 3 devices</li></ul>
+            <ul><li>Unlimited apps and websites</li><li>Daily time limits</li><li>Strict mode</li><li>Unlimited schedules</li><li>90 days of insights</li><li>Windows &amp; Mac apps + extension, 3 devices</li></ul>
             <a class="btn primary js-buy-year" href="#">Get Pro yearly</a>
             <span class="muted">Just <span class="js-price-ypm">$2.50</span> a month · 7-day free trial in the app</span>
           </div>
@@ -204,10 +213,10 @@
           <details><summary>How does it block websites?</summary><p>It adds the sites to the Windows hosts file, so they don’t load in any browser. That’s why it needs administrator rights once. When blocking turns off, the entries are removed automatically. A tab that was already open may keep working until you reload it.</p></details>
           <details><summary>Can I block Discord or Steam only during work hours?</summary><p>Yes. Set blocking to <b>On a schedule</b> and pick your days and hours, or use <b>During focus</b> to block only while a timer runs.</p></details>
           <details><summary>What can’t be blocked?</summary><p>Parts of Windows (Explorer, Task Manager, system services) and Hushblock itself are protected so your PC always keeps working.</p></details>
-          <details><summary>Does Hushblock collect my data?</summary><p>No. Your lists and statistics are stored only on your PC. The app talks to the internet only to check a Pro license key. Read the <a href="../privacy.html">privacy policy</a>.</p></details>
+          <details><summary>Does Hushblock collect my data?</summary><p>No. Your lists and statistics are stored only on your computer. The app talks to the internet only to check a Pro license key. Read the <a href="../privacy.html">privacy policy</a>.</p></details>
           <details><summary>I already bought Pro for the browser extension.</summary><p>Great — use the same license key in the app (Pro → Already have a license key?). One key works on up to 3 devices.</p></details>
           <details><summary>How do I uninstall?</summary><p>Settings → Apps → Hushblock → Uninstall. It removes its website blocks and startup task, and asks whether to keep your settings.</p></details>
-          <details><summary>When is the Mac app coming?</summary><p>We’re working on it. Click <b>Notify me</b> above to get one email when it’s out.</p></details>
+          <details><summary>Does it work on Mac?</summary><p>Yes — Hushblock for Mac blocks apps and websites, lives in the menu bar and uses the same account and Pro license. It needs macOS 11 or later and runs natively on Apple silicon and Intel.</p></details>
         </div>
       </div>
     </section>
@@ -216,7 +225,7 @@
       <div class="container final">
         <img src="../img/logo.svg" alt="" width="72" height="72" />
         <h2>Your PC, without the pull.</h2>
-        <a class="btn primary js-dl" href="#">Download for Windows</a>
+        <a class="btn primary" href="#download">Download Hushblock</a>
       </div>
     </section>
   </main>
@@ -234,22 +243,26 @@
     </div>
   </footer>
 
-  <script src="../site-config.js?v=20261112c"></script>
+  <script src="../site-config.js?v=20261113b"></script>
   <script>
     (function () {
       var S = window.SITE || {};
       var D = S.desktop || {};
       var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
       var isMac = /Mac/i.test(navigator.platform || '') || /Mac OS X/.test(navigator.userAgent) && !/Windows/.test(navigator.userAgent);
-      $$('.js-dl').forEach(function (a) {
-        if (a.getAttribute('href') === '#download' && a.id !== 'heroDl') return;
-        a.href = D.windowsUrl || '#';
-        a.setAttribute('download', '');
-      });
+      var M = D.mac || {};
+      $$('.js-dl-win').forEach(function (a) { if (D.windowsUrl) { a.href = D.windowsUrl; a.setAttribute('download', ''); } });
+      $$('.js-dl-mac').forEach(function (a) { if (M.url) { a.href = M.url; a.setAttribute('download', ''); } });
       if (isMac) {
-        var mb = document.getElementById('heroMac');
-        mb.querySelector('span').textContent = 'Mac — coming soon';
+        // Mac visitors: Mac download first.
+        var w = document.getElementById('heroWin'), m = document.getElementById('heroMac');
+        w.className = 'btn ghost js-dl-win'; m.className = 'btn primary js-dl-mac';
+        w.parentNode.insertBefore(m, w);
+        var row = document.querySelector('.os-row'), mc = document.getElementById('mac');
+        if (row && mc) row.insertBefore(mc, row.firstChild);
       }
+      $$('.js-mac-ver').forEach(function (e) { e.textContent = M.version || ''; });
+      $$('.js-mac-size').forEach(function (e) { e.textContent = M.size || ''; });
       $$('.js-ver').forEach(function (e) { e.textContent = D.version || ''; });
       $$('.js-size').forEach(function (e) { e.textContent = D.size || ''; });
       $$('.js-sha').forEach(function (e) { e.textContent = D.sha256 || '—'; });

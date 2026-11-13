@@ -174,9 +174,9 @@
     return h('div', { class: 'auth-side' },
       h('div', { class: 'mark' }, h('img', { src: '../img/logo.svg', alt: '' }), 'Hushblock'),
       h('h2', {}, DEVICE_NAME[device] ? 'Sign in to finish setting up ' + DEVICE_NAME[device] + '.' : 'One account for all your devices.'),
-      h('p', {}, 'Your Hushblock account carries Pro to the Windows app, the browser extension and soon the Mac app.'),
+      h('p', {}, 'Your Hushblock account carries Pro to the Windows app, the Mac app and the browser extension.'),
       h('ul', { class: 'perks' },
-        perk(icon('devices'), 'Pro everywhere', 'Buy once, use on up to 3 devices.'),
+        perk(icon('devices'), 'Pro everywhere', 'Windows, Mac and browser — up to 3 devices.'),
         perk(icon('search'), 'Found automatically', 'Purchases made with your email appear by themselves.'),
         perk(icon('shield'), 'Private', 'We never see which apps or sites you block.')),
       h('p', { class: 'fine' }, 'Free plan users don’t need an account — just download and start.'));
@@ -373,10 +373,18 @@
         best ? h('a', { class: 'btn primary sm', href: '../thanks.html?license_key=' + encodeURIComponent(best.key) + '&from=account' }, 'Activate') : null,
         storeBtns.length ? storeBtns : (best ? null : h('span', { class: 'pill soon' }, 'In review'))));
 
-    var mac = h('div', { class: 'device soon' + (device === 'mac' ? ' hl' : '') },
+    var M = D.mac || {};
+    var macDl = M.url || '../desktop/#mac';
+    var mac = h('div', { class: 'device' + (device === 'mac' ? ' hl' : '') },
       h('div', { class: 'dic' }, filled(APPLE)),
-      h('div', {}, h('b', {}, 'Mac app'), h('div', { class: 'how' }, 'Coming soon. Your account will work there automatically.')),
-      h('div', { class: 'acts' }, h('span', { class: 'pill soon' }, 'Coming soon')));
+      h('div', {}, h('b', {}, 'Mac app'),
+        h('div', { class: 'how' }, best
+          ? 'Have it installed? Click Activate — Hushblock opens and turns on Pro. New Mac? Download it first.'
+          : 'Blocks apps and websites on your Mac. Lives in the menu bar.')),
+      h('div', { class: 'acts' }, best
+        ? [h('a', { class: 'btn primary sm', href: winLink(best.key, email), onclick: function () { toast('Opening Hushblock… If nothing happens, install it first.'); } }, 'Activate'),
+          h('a', { class: 'btn ghost sm', href: macDl, download: M.url ? '' : null }, 'Download')]
+        : [h('a', { class: 'btn primary sm', href: macDl, download: M.url ? '' : null }, 'Download')]));
 
     return h('section', { class: 'card' },
       h('h2', {}, best ? 'Turn on Pro on your devices' : 'Get Hushblock on your devices'),
@@ -464,13 +472,13 @@
     show(h('div', { class: 'dash' }, out));
 
     // Came here from the Windows app: hand Pro straight back to it (once per key per tab).
-    if (best && device === 'windows') {
+    if (best && (device === 'windows' || device === 'mac')) {
       var flag = 'hb-sent-' + best.key;
       var sent = false;
       try { sent = !!sessionStorage.getItem(flag); sessionStorage.setItem(flag, '1'); } catch (e) { /* ignore */ }
       if (!sent) {
         location.href = winLink(best.key, a.email);
-        toast('Opening Hushblock for Windows…');
+        toast('Opening Hushblock…');
       }
     }
   }

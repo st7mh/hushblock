@@ -24,10 +24,16 @@ window.SITE = {
   supabaseKey: 'sb_publishable_pBCLKvw2ohvGkEjI6Ql_Tg_axI4vplc',
   // Windows app download (the installer lives in the download/ folder of this site)
   desktop: {
-    version: '1.0.1',
+    version: '1.0.2',
     windowsUrl: 'https://st7mh.github.io/hushblock/download/Hushblock-Setup.exe',
-    size: '2.6 MB',
-    sha256: 'd01abc0723fc39cdee3a52437e452014de02a6064da455479dd4be28cffe4d9a',
+    size: '2.7 MB',
+    mac: {
+      version: '1.0.0',
+      url: 'https://st7mh.github.io/hushblock/download/Hushblock-mac.zip',
+      size: '6.4 MB',
+      sha256: '3498fcef0b077aef7bc11bf604398c68231908666860c3a1493050a7553d6d4b',
+    },
+    sha256: '9870eb346621729b41143fce8988691764ae9c2ca52951cdcaafc42c5adfb4e5',
   },
   // Where customers manage or cancel their subscription
   portalUrl: 'https://customer.dodopayments.com/login/bus_0NUrZESLEBLpA1DuJyvEQ',

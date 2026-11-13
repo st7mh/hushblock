@@ -31,7 +31,7 @@ window.SITE = {
       version: '1.0.1',
       url: 'https://st7mh.github.io/hushblock/download/Hushblock-mac.zip',
       size: '6.4 MB',
-      sha256: '9c702ac1be3db005052c526b10b6861ab7a130dbd62931d9887edae23292dca7',
+      sha256: '619aed801c13f0942f0703c9e157523a958d1916fb1ba804f0870d574a6f8bdc',
     },
     sha256: '16c4e640647df7f0e0b7a945ca79de20ba887bcb38f151870f705d24291e0a5f',
   },

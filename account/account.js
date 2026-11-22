@@ -368,7 +368,7 @@
       h('div', {}, h('b', {}, 'Browser extension'),
         h('div', { class: 'how' }, best
           ? 'Open this page in the browser where Hushblock is installed and click Activate.'
-          : live.length ? 'Website blocker for Chrome, Edge and Firefox.' : 'Website blocker for Chrome, Edge and Firefox — arriving in the stores soon.')),
+          : live.length ? (stores.chrome ? 'Website blocker for Chrome, Edge and Firefox.' : 'Website blocker for Edge and Firefox. Chrome version coming soon.') : 'Website blocker for Chrome, Edge and Firefox — arriving in the stores soon.')),
       h('div', { class: 'acts' },
         best ? h('a', { class: 'btn primary sm', href: '../thanks.html?license_key=' + encodeURIComponent(best.key) + '&from=account' }, 'Activate') : null,
         storeBtns.length ? storeBtns : (best ? null : h('span', { class: 'pill soon' }, 'In review'))));

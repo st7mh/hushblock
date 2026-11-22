@@ -10,7 +10,7 @@
   <meta property="og:image" content="../img/win-home-light.webp" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="../img/favicon-32.png" />
-  <link rel="stylesheet" href="../style.css?v=20261113b" />
+  <link rel="stylesheet" href="../style.css?v=20261122a" />
   <style>
     .os-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
     .os { background: var(--surface); border: 1.5px solid var(--line); border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 12px; }
@@ -243,7 +243,7 @@
     </div>
   </footer>
 
-  <script src="../site-config.js?v=20261113b"></script>
+  <script src="../site-config.js?v=20261122a"></script>
   <script>
     (function () {
       var S = window.SITE || {};
@@ -274,6 +274,12 @@
       $$('.js-price-ypm').forEach(function (e) { e.textContent = S.priceYearPerMonth; });
       $$('.js-buy-year').forEach(function (a) { a.href = S.checkoutYearly; });
       $$('.js-buy-month').forEach(function (a) { a.href = S.checkoutMonthly; });
+      try { // signed in on the account page? say so in the header
+        var ref = (S.supabaseUrl || '').replace(/^https:\/\//, '').split('.')[0];
+        var raw = ref && localStorage.getItem('sb-' + ref + '-auth-token');
+        var email = raw && (JSON.parse(raw).user || {}).email;
+        if (email) $$('.nav-signin').forEach(function (a) { a.textContent = 'Your account'; a.title = email; });
+      } catch (e) {}
     })();
   </script>
 </body>

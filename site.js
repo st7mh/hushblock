@@ -50,10 +50,22 @@
       box.append(a);
     });
   });
-  if (live.length) {
-    all('.js-ext-tag').forEach((el) => (el.textContent = 'Available now'));
-    all('.js-ext-note').forEach((el) => (el.textContent = live.length < 3 ? 'More stores coming soon.' : 'Works in Brave, Arc and Opera too.'));
-  }
+  all('.js-ext-tag').forEach((el) => (el.textContent = live.length ? 'Available now' : 'In review'));
+  all('.js-ext-note').forEach((el) => (el.textContent = stores.chrome ? 'Works in Brave, Arc and Opera too.' : 'Chrome Web Store version is coming soon.'));
+  ['edge', 'firefox', 'chrome'].forEach((k) => all('.js-store-' + k).forEach((a) => {
+    if (stores[k]) { a.href = stores[k]; a.target = '_blank'; a.rel = 'noopener'; }
+  }));
+  // Signed in on the account page? Show that in the header instead of "Sign in".
+  try {
+    const ref = (S.supabaseUrl || '').replace(/^https:\/\//, '').split('.')[0];
+    const raw = ref && localStorage.getItem('sb-' + ref + '-auth-token');
+    const email = raw && (JSON.parse(raw).user || {}).email;
+    if (email) {
+      all('.nav-signin').forEach((a) => { a.textContent = 'Your account'; a.title = email; });
+      all('.js-acct-text').forEach((el) => { el.innerHTML = ''; const b = document.createElement('b'); b.textContent = 'Signed in as ' + email + '.'; el.append(b, ' Open your account to turn on Pro in every app.'); });
+      all('.js-acct-btn').forEach((a) => (a.textContent = 'Your account'));
+    }
+  } catch (e) { /* storage blocked: keep "Sign in" */ }
   all('.js-notify-mac').forEach((a) => S.email && (a.href = 'mailto:' + S.email + '?subject=' + encodeURIComponent('Notify me: Hushblock for Mac') + '&body=' + encodeURIComponent('Please email me when Hushblock for Mac is available.')));
   all('.js-email').forEach((a) => {
     if (S.email) {

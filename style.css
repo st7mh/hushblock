@@ -195,3 +195,5 @@ footer a:hover { color: var(--ink); }
 .related a { color: var(--muted); text-decoration: none; }
 .related a:hover { color: var(--brand-text); }
 @media (max-width: 860px) { .steps-row { grid-template-columns: 1fr; } }
+footer .badges { width: 100%; display: flex; gap: 12px; flex-wrap: wrap; }
+footer .badges img { display: block; height: auto; }

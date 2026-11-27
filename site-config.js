@@ -1,10 +1,10 @@
 // Edit these values after publishing. Everything on the site updates automatically.
 window.SITE = {
   // Your Chrome Web Store link (fill in after the extension is approved)
-  storeUrl: '',
+  storeUrl: 'https://chromewebstore.google.com/detail/hushblock-website-blocker/ghjhfpkejljepgpocnnjgaelbegkappg',
   // Browser extension store pages — paste each link once the listing is live.
   stores: {
-    chrome: '',
+    chrome: 'https://chromewebstore.google.com/detail/hushblock-website-blocker/ghjhfpkejljepgpocnnjgaelbegkappg',
     edge: 'https://microsoftedge.microsoft.com/addons/detail/gakneiepmaeffhdfcacgcjfiakiibmfn',
     firefox: 'https://addons.mozilla.org/firefox/addon/hushblock/',
   },
@@ -17,23 +17,23 @@ window.SITE = {
   priceYear: '$29.99',
   priceYearPerMonth: '$2.50',
   // Dodo Payments checkout links (static payment links)
-  checkoutMonthly: 'https://checkout.dodopayments.com/buy/pdt_0NrmYGNB15mZohFfnClwT?quantity=1&redirect_url=https%3A%2F%2Fhushblock.app%2Fthanks.html&metadata_source=website',
-  checkoutYearly: 'https://checkout.dodopayments.com/buy/pdt_0NrmYGRc2VuDUfbc9Rr93?quantity=1&redirect_url=https%3A%2F%2Fhushblock.app%2Fthanks.html&metadata_source=website',
+  checkoutMonthly: 'https://checkout.dodopayments.com/buy/pdt_0NrmYGNB15mZohFfnClwT?quantity=1&redirect_url=https%3A%2F%2Fst7mh.github.io%2Fhushblock%2Fthanks.html&metadata_source=website',
+  checkoutYearly: 'https://checkout.dodopayments.com/buy/pdt_0NrmYGRc2VuDUfbc9Rr93?quantity=1&redirect_url=https%3A%2F%2Fst7mh.github.io%2Fhushblock%2Fthanks.html&metadata_source=website',
   // Accounts (Supabase). Both values are public — safe to keep in the site.
   supabaseUrl: 'https://cskmxkpxpybhrewwgiqb.supabase.co',
   supabaseKey: 'sb_publishable_pBCLKvw2ohvGkEjI6Ql_Tg_axI4vplc',
   // Windows app download (the installer lives in the download/ folder of this site)
   desktop: {
-    version: '1.1.0',
-    windowsUrl: 'https://hushblock.app/download/Hushblock-Setup.exe',
+    version: '1.1.1',
+    windowsUrl: 'https://st7mh.github.io/hushblock/download/Hushblock-Setup.exe',
     size: '2.7 MB',
     mac: {
-      version: '1.1.0',
-      url: 'https://hushblock.app/download/Hushblock-mac.zip',
+      version: '1.1.1',
+      url: 'https://st7mh.github.io/hushblock/download/Hushblock-mac.zip',
       size: '6.5 MB',
-      sha256: '63b1fbe469ab5cf2ac4c6050e343c54d430050714a71e8513f5020257851a23e',
+      sha256: '4e14278a8a78f7e0ff71136a888c61537861d25f359fcd69a29a48909fd06a88',
     },
-    sha256: '55742dd39907b9d41dc3caecf50815d30d563ab20722c91625d9cfc5fa79d642',
+    sha256: '447c89780e17b8a8c9609cd404943565874b7487f1843bd469799479eb4eb6eb',
   },
   // Where customers manage or cancel their subscription
   portalUrl: 'https://customer.dodopayments.com/login/bus_0NUrZESLEBLpA1DuJyvEQ',

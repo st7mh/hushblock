@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /account/
+Disallow: /thanks.html
+
+Sitemap: https://hushblock.app/sitemap.xml

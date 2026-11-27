@@ -1,0 +1,28 @@
+# Hushblock
+
+> Hushblock is an app and website blocker with a focus timer for Windows 10/11, macOS 11+ and a browser extension for Chrome, Edge and Firefox. It blocks distracting websites and desktop apps (games, Steam, Discord, Telegram) during focus sessions, on schedules or after daily time limits. Its unique feature is "learning goals": you name a topic, Hushblock makes a short AI study plan, blocks everything else, and ends the session early only when you pass a 6-question quiz on that topic.
+
+Key facts:
+- Free forever plan: block up to 5 websites and 3 apps, unlimited focus sessions, 1 schedule, 1 daily limit, 3 learning goals a day, 7 days of stats.
+- Pro: $29.99/year or $4.99/month, 7-day free trial, one license on up to 3 devices. Adds strict mode (can't stop or unblock early), allowlist mode, keyword blocking, password protection, unlimited sites/apps/schedules/limits/learning goals, 90-day history and CSV export.
+- Can block only YouTube Shorts (youtube.com/shorts) while the rest of YouTube keeps working.
+- Private: block lists and statistics stay on the device; no ads or tracking.
+- Not available on iPhone or Android yet.
+
+## Main pages
+- [Home](https://hushblock.app/): features, pricing and FAQ
+- [Windows & Mac apps](https://hushblock.app/desktop/): download and install help
+- [Study blocker with quiz-to-unlock](https://hushblock.app/study-blocker/)
+- [Block YouTube or YouTube Shorts](https://hushblock.app/block-youtube/)
+- [Block games, Steam and Discord](https://hushblock.app/block-games/)
+
+## Comparisons
+- [Cold Turkey alternative](https://hushblock.app/cold-turkey-alternative/)
+- [Freedom alternative](https://hushblock.app/freedom-alternative/)
+- [LeechBlock alternative](https://hushblock.app/leechblock-alternative/)
+
+## Get it
+- [Windows installer](https://hushblock.app/download/Hushblock-Setup.exe)
+- [Chrome Web Store](https://chromewebstore.google.com/detail/hushblock-website-blocker/ghjhfpkejljepgpocnnjgaelbegkappg)
+- [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/hushblock/)
+- [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/gakneiepmaeffhdfcacgcjfiakiibmfn)
